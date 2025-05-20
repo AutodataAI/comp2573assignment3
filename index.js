@@ -2,6 +2,13 @@ let powerUpUsed = false;
 
 
 $(document).ready(function () {
+  
+  $("#themeSelector").on("change", function () {
+    const selectedTheme = $(this).val();
+    $("body").removeClass("light dark").addClass(selectedTheme);
+  });
+  
+  
   $("#startBtn").on("click", function () {
     startNewGame();
   });
@@ -251,5 +258,6 @@ async function startNewGame() {
   const pokemonData = await fetchPokemonData(pokemonIDs);
   setupGame(pokemonData);
 }
+
 
 
