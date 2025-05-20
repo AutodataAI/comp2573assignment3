@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- import jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body class="light">
+  
+  <!--Level Control-->
+  <div id="controls">
+    <select id="difficulty">
+      <option value="easy">Easy (3 pairs)</option>
+      <option value="medium">Medium (6 pairs)</option>
+      <option value="hard">Hard (9 pairs)</option>
+    </select>
+    <select id="themeSelector">
+  <option value="light">Light Theme</option>
+  <option value="dark">Dark Theme</option>
+</select>
+    <button id="startBtn">Start</button>
+    <button id="resetBtn">Reset</button>
+    <button id="powerUpBtn" disabled>Power-Up</button>
+
+
+  </div>
+  <div id="status">
+    Clicks: <span id="clicks">0</span> |
+    Pairs Left: <span id="pairsLeft">0</span> |
+    Matches: <span id="matches">0</span> |
+    Total Pairs: <span id="totalPairs">0</span> |
+    Time Left: <span id="timer">0</span>
+  </div>
+
+
+
+
+  
+  <div id="game_grid">
+    <div class="card">
+      <img id="img1" class="front_face" src="001.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+    <div class="card">
+      <img id="img2" class="front_face" src="002.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+    <div class="card">
+      <img id="img3" class="front_face" src="003.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+    <div class="card">
+      <img id="img4" class="front_face" src="001.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+    <div class="card">
+      <img id="img5" class="front_face" src="002.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+    <div class="card">
+      <img id="img6" class="front_face" src="003.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+  </div>
+</body>
+
+</html>

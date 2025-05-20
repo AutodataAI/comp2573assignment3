@@ -1,0 +1,157 @@
+body {
+  margin: 0px;
+}
+
+#game_grid {
+  display: grid;
+  gap: 15px;
+  width: fit-content;
+  margin: 30px auto;
+  padding: 10px;
+}
+
+
+
+.card {
+  width: 100px;
+  height: 140px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  perspective: 1000px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  background-color: white;
+}
+
+
+
+img {
+  width: 100%
+}
+
+.front_face,
+.back_face {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+
+.front_face {
+  transform: rotateY(180deg);
+}
+
+#controls, #status {
+  text-align: center;
+  margin: 10px;
+}
+
+#game_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 15px;
+  width: fit-content;
+  margin: 30px auto;
+  padding: 10px;
+}
+
+
+.card {
+  width: 100px;
+  height: 140px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  perspective: 1000px;
+}
+
+.front_face,
+.back_face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.front_face {
+  transform: rotateY(180deg);
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  background-color: white;
+}
+
+body.light {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+body.dark {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+body.dark .card {
+  background-color: #333;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.2);
+}
+
+body.light .card {
+  background-color: white;
+}
+
+button {
+  padding: 8px 14px;
+  margin: 5px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+#themeSelector {
+  padding: 8px 14px;
+  margin: 5px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#themeSelector:hover {
+  background-color: #0056b3;
+}
+
+body.dark #themeSelector {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark #themeSelector:hover {
+  background-color: #666;
+}
